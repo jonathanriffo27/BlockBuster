@@ -1,10 +1,9 @@
 <p style="color: green"><%= notice %></p>
-
 <%= render @movie %>
-
 <div>
-  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
-  <%= link_to "Back to movies", movies_path %>
-
-  <%= button_to "Destroy this movie", @movie, method: :delete %>
+  <div class='d-flex gap-2'>
+    <%= link_to "Editar", edit_movie_path(@movie), class: "btn btn-secondary btn-sm" %>
+    <%= link_to "Volver a peliculas", movies_path, class: "btn btn-secondary btn-sm"  %>
+    <%= button_to "Eliminar", @movie, class: "btn btn-danger btn-sm ms-5",  method: :delete %>
+  </div>
 </div>
